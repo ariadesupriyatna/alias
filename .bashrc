@@ -27,3 +27,6 @@ alias Gpeda='git clone https://github.com/longld/peda.git ~/peda && echo "source
 alias LCT='npm install -g localtunnel && lt --port 8000'
 alias str='strace -f ./binary'
 alias dbin='objdump -d binary'
+alias respon='ping 8.8.8.8'
+alias myip='ifconfig | grep inet'
+alias mailx='nslookup -type=MX hackerone.com'
