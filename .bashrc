@@ -41,3 +41,31 @@ alias buatKS='keytool -genkey -v -keystore my-release-key.keystore -alias NAMA_A
 alias pakaiKS='jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore NAMA_APK.apk NAMA_ALIAS'
 alias jejak='cat /data/data/com.termux/files/usr/var/log/apt/history.log'
 alias forensik='ls -l | grep Jul'
+
+#!/bin/bash
+
+clear
+# Tentukan Password
+correct_password="master"
+
+# menampilkan nama pengguna
+echo ""
+echo ""
+echo ""
+echo "         user: 0x00_nolduakali"
+
+# Ulangi hingga kata sandi yang benar dimasukkan
+while true; do
+  # Meminta kata sandi
+  read -sp "         Password: " password
+
+  # Periksa apakah kata sandi cocok
+  if [[ "$password" == "$correct_password" ]]; then
+    echo ""
+    echo "         Login Berhasil!!!"
+    break  # Keluar dari perulangan setelah berhasil masuk
+  else
+    echo ""
+    echo "           password salah :( ?"
+  fi
+done
